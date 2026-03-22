@@ -14,6 +14,13 @@
     a, button, [role="button"], label, select, input, textarea, .node { cursor: pointer; }
     a *, button *, [role="button"] *, label * { cursor: inherit; }
     html { scroll-behavior: auto; }
+
+    /* ─── SCROLLBAR ──────────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.18); border-radius: 2px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.32); }
+    * { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.18) transparent; }
     body {
       font-family: 'DM Sans', sans-serif;
       background: #0D0D0D;
@@ -397,9 +404,9 @@
       cursor: pointer;
       text-decoration: none;
     }
-    .learn-more    { gap: 16px; margin-top: 36px; }
+    .learn-more    { gap: 16px; margin-top: 36px; align-self: flex-start; }
     .cta-btn       { gap: 16px; }
-    .linkedin-link { gap: 16px; margin-top: 40px; }
+    .linkedin-link { gap: 16px; margin-top: 40px; align-self: flex-start; }
 
     /* Text label */
     .cta-text {
@@ -536,7 +543,7 @@
       font-weight: 300;
       color: var(--offwhite);
       line-height: 1.08;
-      margin-bottom: 20px;
+      margin-bottom: 36px;
       max-width: 420px;
     }
     .how-sub {
@@ -698,7 +705,7 @@
       font-weight: 300;
       color: var(--black);
       line-height: 1.08;
-      margin-bottom: 16px;
+      margin-bottom: 36px;
     }
     .portfolio-sub {
       font-size: 16px;
@@ -855,7 +862,7 @@
       font-weight: 300;
       color: var(--black);
       line-height: 1.08;
-      margin-bottom: 32px;
+      margin-bottom: 36px;
     }
     .name-row {
       display: flex;
